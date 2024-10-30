@@ -533,7 +533,7 @@ img{
     /* Inactive menu item */
 .mymenus{
   z-index: 99;
-  width: 80%;
+  width: 90%;
   background: var(--menuitem);
   position: fixed;
   right: 0;

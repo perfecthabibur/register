@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Form</title>
+
+  <meta name="theme-color" id="meta-theme-color" content="#e0e5ec" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />  
+</head>
+<body>
+
+  <div class="form-container">
+    <button class="theme-toggle" onclick="toggleTheme(event)">
+      <i id="theme-icon" class="fa-solid fa-sun"></i>
+    </button>
+    <div class="avatar">
+      <i class="fa-solid fa-house-user"></i>
+    </div>
+     <div class="container">
+    <h2>ঠিকানা নির্বাচন ফর্ম</h2>
+
+    <label for="division">বিভাগ নির্বাচন করুন</label>
+    <select id="division" class="select2" onchange="loadDistricts()">
+      <option value=""></option>
+    </select>
+
+    <label for="district">জেলা নির্বাচন করুন</label>
+    <select id="district" class="select2" onchange="loadUpazilas()">
+      <option value=""></option>
+    </select>
+
+    <label for="upazila">উপজেলা নির্বাচন করুন</label>
+    <select id="upazila" class="select2" onchange="loadUnions()">
+      <option value=""></option>
+    </select>
+
+    <label for="union">ইউনিয়ন নির্বাচন করুন</label>
+    <select id="union" class="select2" onchange="loadPostOffices()">
+      <option value=""></option>
+    </select>
+
+    <label for="postOffice">পোস্ট অফিস নির্বাচন করুন</label>
+    <select id="postOffice" class="select2" onchange="loadVillages()">
+      <option value=""></option>
+    </select>
+    <label for="village">গ্রাম নির্বাচন করুন</label>
+    <select id="village" class="select2">
+      <option value=""></option>
+    </select>
+
+    <div id="locationSummary" style="margin-top: 20px; font-weight: bold;">
+    </div>
+    <button type="button" onclick="showLocationSummary()">ভিউ লোকেশন</button>
+  </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="script.js"></script>  
+  <script src="data.js"></script>
+</body>
+</html>

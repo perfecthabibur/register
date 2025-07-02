@@ -20,40 +20,40 @@
       <i class="fa-solid fa-house-user"></i>
     </div>
      <div class="container">
-    <h2>ঠিকানা নির্বাচন ফর্ম</h2>
+    <h3>ঠিকানা নির্বাচন ফর্ম</h3>
 
-    <label for="division">বিভাগ নির্বাচন করুন</label>
+    <label for="division">বিভাগ</label>
     <select id="division" class="select2" onchange="loadDistricts()">
       <option value=""></option>
     </select>
 
-    <label for="district">জেলা নির্বাচন করুন</label>
+    <label for="district">জেলা</label>
     <select id="district" class="select2" onchange="loadUpazilas()">
       <option value=""></option>
     </select>
 
-    <label for="upazila">উপজেলা নির্বাচন করুন</label>
+    <label for="upazila">উপজেলা</label>
     <select id="upazila" class="select2" onchange="loadUnions()">
       <option value=""></option>
     </select>
 
-    <label for="union">ইউনিয়ন নির্বাচন করুন</label>
+    <label for="union">ইউনিয়ন</label>
     <select id="union" class="select2" onchange="loadPostOffices()">
       <option value=""></option>
     </select>
 
-    <label for="postOffice">পোস্ট অফিস নির্বাচন করুন</label>
+    <label for="postOffice">পোস্ট অফিস</label>
     <select id="postOffice" class="select2" onchange="loadVillages()">
       <option value=""></option>
     </select>
-    <label for="village">গ্রাম নির্বাচন করুন</label>
+    <label for="village">গ্রাম</label>
     <select id="village" class="select2">
       <option value=""></option>
     </select>
 
-    <div id="locationSummary" style="margin-top: 20px; font-weight: bold;">
+    <div id="locationSummary" style="margin-top: 20px;">
     </div>
-    <button type="button" onclick="showLocationSummary()">ভিউ লোকেশন</button>
+    <button class="viewbtn" type="button" onclick="showLocationSummary()">ভিউ লোকেশন</button>
   </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

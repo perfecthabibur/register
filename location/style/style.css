@@ -1,0 +1,298 @@
+:root {
+  --bg-color: #e0e5ec;
+  --text-color: #000;
+  --input-bg: #ffffff;
+  --shadow-light: #ffffff;
+  --shadow-dark: #bebebe;
+  --inner-shadow-light: #ffffff;
+  --inner-shadow-dark: #c5cace;
+  --button-gradient: #eaeaea;
+}
+
+.dark-mode {
+  --bg-color: #1e1e1e;
+  --text-color: #fff;
+  --input-bg: #000000;
+  --shadow-light: #2e2e2e;
+  --shadow-dark: #111;
+  --inner-shadow-light: #3a3a3a;
+  --inner-shadow-dark: #111;
+  --button-gradient: #001a1f;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: var(--bg-color);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+  transition: background 0.5s, color 0.5s;
+}
+
+.form-container {
+  max-width: 500px;
+  background: var(--bg-color);
+  padding: 20px;
+  margin-top: 80px;
+  border-radius: 20px;
+  box-shadow: 20px 20px 60px var(--shadow-dark), -20px -20px 60px var(--shadow-light);
+  width: 100%;
+  position: relative;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: 2px solid var(--shadow-dark);
+  box-shadow: 4px 4px 10px var(--shadow-dark), -4px -4px 10px var(--shadow-light);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--text-color);
+  outline: none;
+  appearance: none;
+  transition: all 0.4s;
+}
+
+.avatar {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid var(--shadow-dark);
+  box-shadow: 4px 4px 10px var(--shadow-dark), -4px -4px 10px var(--shadow-light);
+  font-size: 35px;
+  color: var(--text-color);
+}
+.avatar .homeicon{
+  width: 40px;
+}
+.homeicon use{
+  fill: var(--text-color);
+}
+
+.form-container h2, h4 {
+  text-align: center;
+  color: var(--text-color);
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+p {
+  color: var(--text-color);
+}
+
+label {
+  font-size: 14px;
+  margin: 15px 0 8px;
+  display: block;
+  color: var(--text-color);
+}
+
+.input-box {
+  border: 2px solid var(--shadow-dark);
+  display: flex;
+  align-items: center;
+  background: var(--input-bg);
+  border-radius: 12px;
+  box-shadow: inset 6px 6px 12px var(--inner-shadow-dark), inset -6px -6px 12px var(--inner-shadow-light);
+  padding: 5px 8px;
+  height: 35px;
+  margin-bottom: 20px;
+}
+
+.input-box svg {
+  color: var(--text-color);
+  font-size: 16px;
+  margin-right: -5px;
+  margin-top: 3px;
+}
+.input-box button{
+  background: transparent;
+  border: none;
+}
+.input-box .clearicon{
+  width: 30px;
+  fill: var(--text-color);
+}
+
+.input-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+  color: var(--text-color);
+  text-shadow: 1px 1px 1px var(--inner-shadow-dark), -1px -1px 1px var(--inner-shadow-light);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: var(--text-color);
+  text-shadow: 1px 1px 1px var(--inner-shadow-dark), -1px -1px 1px var(--inner-shadow-light);
+  height: 40px !important;
+  display: flex !important;
+  font-size: 16px !important;
+  align-items: center !important;
+}
+
+
+
+/* Select2 dropdown অপশনগুলোর ব্যাকগ্রাউন্ড ও টেক্সট কালার */
+#searchResult{
+  color: var(--text-color);
+}
+
+/* Select2 dropdown অপশনগুলোর ব্যাকগ্রাউন্ড ও টেক্সট কালার */
+
+.select2-dropdown{
+  background: var(--bg-color) !important;
+  color: var(--text-color);
+}
+.select2-container--default .select2-search--dropdown .select2-search__field{
+  background: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 8px;
+  height: 40px !important;
+  display: flex !important;
+  font-size: 16px !important;
+  align-items: center !important;
+  
+}
+
+.select2-container .select2-results__option {
+  background: var(--bg-color); /* ব্যাকগ্রাউন্ড কালার */
+  color: var(--text-color);            /* টেক্সট কালার */
+  border: 1px solid ;
+  height: 40px;
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+}
+
+/* যেই অপশন hover করবে */
+.select2-container .select2-results__option--highlighted {
+  background: var(--bg-color) !important; /* হোভার ব্যাকগ্রাউন্ড */
+  color: var(--text-color) !important;
+}
+
+/* সিলেক্টেড অপশন (dropdown এর ভিতরে) */
+.select2-container--default .select2-results__option--selected {
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  border-radius: 8px;
+}
+
+/* টপে যেটা দেখায় (সিলেক্ট হওয়া ভ্যালু) */
+.select2-container--default .select2-selection--single {
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  border: 2px solid var(--shadow-dark) !important;
+  height: 40px !important;
+  
+  font-size: 16px !important;
+  
+}
+
+.select2-container .select2-selection--single{
+  height: 40px !important;
+  font-size: 16px !important;
+  
+}
+/* select2-এর ভেতরের placeholder বা টেক্সট কালার */
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: var(--text-color) !important;
+  line-height: 38px !important;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
+  color: var(--text-color) !important;
+  background: var(--bg-color) !important;
+  height: 40px;
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+}
+
+
+
+/* View Button */
+.viewbtn{
+  margin-top: 10px;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 8px;
+  width: 100%;
+  color: var(--text-color);
+  background: var(--button-gradient) ;
+}
+
+
+    
+/* ✅ Dark mode-specific button override */
+.dark-mode .submit-btn {
+  background: linear-gradient(to right, #ffffff, #e0e0e0);
+  color: #000;
+}
+
+.dark-mode .submit-btn:hover {
+  background: linear-gradient(to right, #e0e0e0, #ffffff);
+}
+
+.firework {
+position: fixed;
+width: 5px;
+height: 8px;
+border-radius: 50%;
+background: radial-gradient(circle, #ff0, #f00, #f0f);
+pointer-events: none;
+animation: fireExplode 800ms ease-out forwards;
+z-index: 1;
+opacity: 0.8;
+}
+
+@keyframes fireExplode {
+  0% {
+    transform: scale(0.2) translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5) translateY(-30px) rotate(180deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(0) translateY(-60px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+#locationSummary{
+  color: var(--text-color);
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    max-width: 350px;
+    padding: 20px;
+  }
+}

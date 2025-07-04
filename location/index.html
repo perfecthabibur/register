@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Location Map BD</title>
+
+  <meta name="theme-color" id="meta-theme-color" content="#e0e5ec" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/style/style.css" type="text/css" media="all" />
+  <link href="/style/jquery.css" rel="stylesheet" />
+  <!-- Pwa App -->
+   <link rel="manifest" href="/json/manifest.json">
+</head>
+<body>
+
+  <div class="form-container">
+    <button class="theme-toggle" onclick="toggleTheme(event)">
+      <i id="theme-icon" class="fa-solid fa-sun"></i>
+    </button>
+    <div class="avatar">
+      <svg class="homeicon">
+        <use xlink:href="/img/house.svg"></use>
+      </svg>
+    </div>
+    <div class="container">
+    <h2>আপনার ঠিকানা খুঁজুন সহজ উপায়ে এখান থেকে</h2>
+    <!-- আপনার গ্রাম সার্চ করুন -->
+    <h4>ঠিকানা সার্চ করুন বাংলা অথবা ইংরেজিতে ।</h4>
+    <label for="searchInput">আপনার গ্রাম সার্চ করুন ।</label>
+    <div class="input-box">
+      <input
+      type="text"
+      id="searchInput"
+      placeholder="পাইকদিয়া, Paikdia (En Or Bn)"
+      oninput="searchLocation()" />
+      <button onclick="clearSearch()">
+        <svg class="clearicon">
+          <use xlink:href="/img/clear.svg"></use>
+        </svg>
+      </button>
+    </div>
+    <div id="searchResult"></div>
+
+
+    <!-- ঠিকানা খুঁজে বের করুন -->
+    <h4>ঠিকানা খুঁজে বের করুন</h4>
+    <label for="division">বিভাগ</label>
+    <select id="division" class="select2" onchange="loadDistricts()">
+      <option value=""></option>
+    </select>
+
+    <label for="district">জেলা</label>
+    <select id="district" class="select2" onchange="loadUpazilas()">
+      <option value=""></option>
+    </select>
+
+    <label for="upazila">উপজেলা</label>
+    <select id="upazila" class="select2" onchange="loadUnions()">
+      <option value=""></option>
+    </select>
+
+    <label for="union">ইউনিয়ন</label>
+    <select id="union" class="select2" onchange="loadPostOffices()">
+      <option value=""></option>
+    </select>
+
+    <label for="postOffice">পোস্ট অফিস</label>
+    <select id="postOffice" class="select2" onchange="loadVillages()">
+      <option value=""></option>
+    </select>
+    <label for="village">গ্রাম</label>
+    <select id="village" class="select2">
+      <option value=""></option>
+    </select>
+
+    <div id="locationSummary" style="margin-top: 20px;">
+    </div>
+    <button class="viewbtn" type="button" onclick="showLocationSummary()">ভিউ লোকেশন</button>
+  </div>
+  </div>
+  <script src="/javascript/jquery.js"></script>
+  <script src="/javascript/jsdelivr.js"></script>
+  <script src="/javascript/script.js"></script>  
+  <script src="/javascript/data.js"></script>
+  <script src="/javascript/app.js"></script>
+  <script src="/javascript/service-worker.js"></script>
+</body>
+</html>

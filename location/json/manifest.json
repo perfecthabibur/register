@@ -1,0 +1,20 @@
+{
+  "name": "লোকেশন সার্চ",
+  "short_name": "লোকেশন",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1d4ed8",
+  "icons": [
+    {
+      "src": "img/houses.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/house.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

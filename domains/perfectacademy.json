@@ -1,0 +1,11 @@
+{
+    "description": "Perfect Academy",
+    "repo": "https://github.com/perfecthabibur/perfectacademy.github.io",
+    "owner": {
+        "username": "perfecthabibur",
+        "email": "socialhabibur@gmail.com"
+    },
+    "record": {
+        "CNAME": "perfectacademy.github.io"
+    }
+}

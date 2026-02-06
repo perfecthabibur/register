@@ -1,11 +1,47 @@
-$(".switch").click(function() {
-  $("body").toggleClass("darkmode");
-  if ($("body").hasClass("darkmode")) {
-    $(".switch").attr("name", "line-md:sun-rising-loop");
-  } else {
-    $(".switch").attr("name", "line-md:moon-alt-loop");
+$(document).ready(function () {
+
+  const themeMeta = document.getElementById("theme-color");
+  const icon = document.querySelector(".switch iconify-icon");
+
+  function setTheme(theme) {
+    if (theme === "dark") {
+      $("body").addClass("darkmode");
+      localStorage.setItem("theme", "dark");
+
+      // address bar + mobile bottom bar
+      themeMeta.setAttribute("content", "#000000");
+
+      // icon
+      icon.setAttribute("icon", "line-md:sun-rising-loop");
+    } else {
+      $("body").removeClass("darkmode");
+      localStorage.setItem("theme", "light");
+
+      themeMeta.setAttribute("content", "#ffffff");
+
+      icon.setAttribute("icon", "line-md:moon-alt-loop");
+    }
   }
+
+  // Load saved theme on refresh
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    setTheme(savedTheme);
+  } else {
+    setTheme("light");
+  }
+
+  // Toggle theme
+  $(".switch").on("click", function () {
+    if ($("body").hasClass("darkmode")) {
+      setTheme("light");
+    } else {
+      setTheme("dark");
+    }
+  });
+
 });
+
 
 (function ($) {
     "use strict";

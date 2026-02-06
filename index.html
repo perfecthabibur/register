@@ -18,72 +18,148 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- inf start -->
+<!-- HERO SECTION START -->
+<section class="hero">
+  <!-- particles -->
+  <div class="hero-particles">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
   <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="inf">
-          <div class="inf-head">
-            <h2>
-              <span>
-                web design
-              </span>
-              and
-              <span>
-                development
-              </span>
-              services
-            </h2>
-          </div>
-        </div>
-        <div class="inf-text">
-          <h5>
-            Professional Full-Stack Web Developer & WordPress Specialist.
-          </h5>
+    <div class="row align-items-center min-vh-100">
+
+      <!-- LEFT CONTENT -->
+      <div class="col-lg-6 text-center text-lg-start">
+        <h1 class="hero-title">
+          <span>Smart</span> Website <br>
+          For Your <span>Business</span>
+        </h1>
+
+        <p class="hero-text">
+          আমরা আধুনিক, দ্রুত ও সিকিউর  
+          <b>E-commerce & Business Website</b> তৈরি করি  
+          যা আপনার ব্যবসাকে অনলাইনে শক্তিশালী করে।
+        </p>
+
+        <div class="hero-action">
+          <button class="hero-btn primary ripple-hover">Start Project</button>
+          <a href="#down" class="hero-btn outline ripple-hover">Explore</a>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- inf End -->
-  <!-- Slide start -->
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- RIGHT SLIDER -->
+      <div class="col-lg-6 mt-4 mt-lg-0">
+        <div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
+
+          <!-- dots -->
           <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="2"></button>
           </div>
-        <div class="carousel-inner slide-img">
-          <div class="carousel-item active">
-            <img src="img/web1.svg">
+
+          <div class="carousel-inner hero-slider">
+            <div class="carousel-item active">
+              <img src="img/web1.svg" alt="">
+            </div>
+            <div class="carousel-item">
+              <img src="img/web2.svg" alt="">
+            </div>
+            <div class="carousel-item">
+              <img src="img/web3.svg" alt="">
+            </div>
           </div>
-          <div class="carousel-item">
-            <img src="img/web2.svg">
-          </div>
-          <div class="carousel-item">
-            <img src="img/web3.svg">
-          </div>
+
         </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- HERO SECTION END -->
+
+<!-- ================== Updated Services Section ================== -->
+<section class="services py-5">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="text-center mb-5 inf">
+      <div class="inf-head">
+        <h1><span>আমাদের</span> সেবা</h1>
+        <h4>আমি যা করি ...?</h4>
+      </div>
+    </div>
+    <!-- Service Cards -->
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="service-box one ripple-hover">
+          <div class="serviceimg">
+            <img src="img/website.svg" alt="ওয়েবসাইট তৈরি"/>
+          </div>
+          <h4>পূর্ণ ওয়েবসাইট তৈরি</h4>
+          <p>
+            আমি আপনার ব্যবসা, পোর্টফোলিও, কোম্পানি, ই-কমার্স বা ব্লগের জন্য সম্পূর্ণ ওয়েবসাইট তৈরি করি। ইউনিক, ক্লিন এবং আকর্ষণীয় ডিজাইন সহ।
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-box two ripple-hover">
+          <div class="serviceimg">
+            <img src="img/shop.svg" alt="ই-কমার্স"/>
+          </div>
+          <h4>ই-কমার্স ফাংশনালিটি</h4>
+          <p>
+            যে কোনো পেমেন্ট গেটওয়ে সাপোর্ট সহ পূর্ণ কার্যকরী অনলাইন স্টোর তৈরি করি এবং শপিং কার্ট ফাংশনালিটি যোগ করি।
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-box three ripple-hover">
+          <div class="serviceimg">
+            <img src="img/responsive.svg" alt="রেস্পন্সিভ ডিজাইন"/>
+          </div>
+          <h4>রেস্পন্সিভ ডিজাইন</h4>
+          <p>
+            ওয়েবসাইটটি স্বয়ংক্রিয়ভাবে মোবাইল, ট্যাবলেট এবং ডেস্কটপে perfectly সমন্বিত হবে। সব ডিভাইসে সুন্দর দেখাবে।
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-box four ripple-hover">
+          <div class="serviceimg">
+            <img src="img/security.svg" alt="ওয়েবসাইট সিকিউরিটি"/>
+          </div>
+          <h4>ওয়েবসাইট সিকিউরিটি</h4>
+          <p>
+            SSL সার্টিফিকেটের মাধ্যমে আপনার ওয়েবসাইটের তথ্য নিরাপদে আদানপ্রদান করা হবে। হ্যাকিং, ম্যালওয়্যার এবং অন্যান্য সাইবার ঝুঁকি থেকে রক্ষা করা হবে।
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-box five ripple-hover">
+          <div class="serviceimg">
+            <img src="img/speed.svg" alt="মেইনটেন্যান্স ও অপটিমাইজ"/>
+          </div>
+          <h4>মেইনটেন্যান্স ও অপটিমাইজ</h4>
+          <p>
+            ধীর লোডিং সমস্যা সমাধান এবং ওয়েবসাইটের গতি বৃদ্ধি করা। আপনার সময় না থাকলেও আমি রেগুলার মেইনটেন্যান্সের দায়িত্ব নেব।
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-box six ripple-hover">
+          <div class="serviceimg">
+            <img src="img/seo.svg" alt="সার্চ ইঞ্জিন অপটিমাইজেশন"/>
+          </div>
+          <h4>সার্চ ইঞ্জিন অপটিমাইজেশন (SEO)</h4>
+          <p>
+            বিভিন্ন স্ট্রাটেজি ও পদ্ধতি প্রয়োগ করে আপনার ওয়েবসাইট সার্চ ইঞ্জিনে উচ্চ র‍্যাংক পাবে। এর মাধ্যমে অর্গানিক ট্রাফিক বৃদ্ধি পাবে।
+          </p>
         </div>
       </div>
     </div>
   </div>
-  <!-- Slide End -->
-    <!-- hero start -->
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="down">
-            <a class="scroll-down" href="#down">
-              <iconify-icon icon="carbon:drill-down"></iconify-icon>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- hero End -->
+</section>
+
   <!-- Step start -->
   <div class="container">
     <div class="row">
@@ -466,7 +542,7 @@
         </li>
         <li>
           <a class="active" href="#">
-            <img src="img/me.png" alt="">  
+            <img src="https://res.cloudinary.com/perfecthabibur/image/upload/f_auto,q_auto/v1770383982/me.png" alt="">  
           </a>
         </li>
         <li>

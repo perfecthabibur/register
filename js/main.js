@@ -137,3 +137,126 @@ document.querySelectorAll(".ripple-hover").forEach(el => {
     }, 700);
   });
 });
+
+//Protflio====
+const filterButtons = document.querySelectorAll(".portfolio-filter button");
+const items = document.querySelectorAll(".portfolio-item");
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    filterButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.getAttribute("data-filter");
+
+    items.forEach(item => {
+      if (filter === "all" || item.classList.contains(filter)) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  });
+});
+//Testimoial=====
+const testimonials = document.querySelectorAll(".testimonial-item");
+const dots = document.querySelectorAll(".testimonial-controls .dot");
+let index = 0;
+
+function showTestimonial(i) {
+  testimonials.forEach(t => t.classList.remove("active"));
+  dots.forEach(d => d.classList.remove("active"));
+
+  testimonials[i].classList.add("active");
+  dots[i].classList.add("active");
+  index = i;
+}
+
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => showTestimonial(i));
+});
+
+setInterval(() => {
+  index = (index + 1) % testimonials.length;
+  showTestimonial(index);
+}, 5000);
+
+
+// card ====
+document.querySelectorAll(".particle-card").forEach(card => {
+  const canvas = card.querySelector(".particle-canvas");
+  const ctx = canvas.getContext("2d");
+
+  function resize() {
+    canvas.width = card.offsetWidth;
+    canvas.height = card.offsetHeight;
+  }
+  resize();
+  window.addEventListener("resize", resize);
+
+  const particles = [];
+
+  for (let i = 0; i < 10; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 2 + 1,
+      vx: (Math.random() - 0.5) * 0.6,
+      vy: (Math.random() - 0.5) * 0.6,
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    particles.forEach(p => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+
+      ctx.fillStyle = document.body.classList.contains("darkmode")
+        ? "rgba(150,150,255,0.6)"
+        : "rgba(100,100,255,0.4)";
+
+      ctx.fill();
+
+      p.x += p.vx;
+      p.y += p.vy;
+
+      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+    });
+
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+});
+
+//border color
+function updateGradientBorder() {
+  const root = document.documentElement;
+  const dark = document.body.classList.contains("darkmode");
+
+  if (dark) {
+    root.style.setProperty("--gb-c1", "#6c63ff");
+    root.style.setProperty("--gb-c2", "#00d4ff");
+    root.style.setProperty("--gb-c3", "#8b5cf6");
+  } else {
+    root.style.setProperty("--gb-c1", "#ff7a18");
+    root.style.setProperty("--gb-c2", "#ffb347");
+    root.style.setProperty("--gb-c3", "#ffd194");
+  }
+}
+
+/* initial */
+updateGradientBorder();
+
+/* যদি তোমার toggle JS থাকে */
+document.addEventListener("click", e => {
+  if (e.target.closest(".switch")) {
+    setTimeout(updateGradientBorder, 50);
+  }
+});
+
+
